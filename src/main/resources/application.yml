@@ -1,0 +1,9 @@
+spring:
+  data:
+    mongodb:
+      initialization-mode: always
+      uri: mongodb://localhost:27017/ms-stock
+  liquibase:
+    change-log:
+      classpath: db/db-json/master.json
+    enabled: true
