@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.Set;
 
 @RestController
-@RequestMapping("/stocks")
+@RequestMapping("api/v1/stocks")
 public class ProductStockController {
     private final CreateProductStockUseCase createProductStockUseCase;
     private final FindAllStocksUseCase findAllStocksUseCase;
