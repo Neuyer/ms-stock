@@ -117,6 +117,7 @@
                         <configuration>
                             <excludes>
                                 <exclude>**/infrastructure/repository/**</exclude>
+                                <exclude>**/infrastructure/config/**</exclude>
                             </excludes>
                         </configuration>
                     </execution>

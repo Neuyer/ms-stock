@@ -6,6 +6,8 @@ import com.fiap.stock.core.gateway.StockGateway;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
+import java.util.Objects;
+
 import static com.fiap.stock.core.entity.StockOperation.DECREASE;
 import static com.fiap.stock.core.entity.StockOperation.INCREASE;
 
@@ -25,6 +27,10 @@ public class AlterProductStockUseCase {
             log.error("Stock not found for sku: {}", sku);
             return new IllegalStateException("Stock not found for sku: " + sku);
         });
+
+        if (Objects.isNull(input.stockOperation()))
+            throw new IllegalArgumentException("No operation informed");
+
 
         if (INCREASE.equals(input.stockOperation()))
             stockDB.increaseStock(input.quantity());

@@ -21,12 +21,12 @@ public class CreateProductStockUseCase {
     public ProductStock execute(CreateProductStockDTO input) {
         log.info("Creating Stock with: {}", input);
 
+        var stock = new ProductStock(UUID.randomUUID().toString(), input.sku(), input.name(), input.quantity());
+
         stockGateway.findBySku(input.sku()).ifPresent(productStock -> {
             log.error("Stock for sku {} already exists", input.sku());
             throw new IllegalStateException("Stock for sku already exists");
         });
-
-        var stock = new ProductStock(UUID.randomUUID().toString(), input.sku(), input.name(), input.quantity());
 
         stockGateway.save(stock);
         log.info("Stock for sku {} created successfully", input.sku());
