@@ -45,7 +45,7 @@ class ProductStockControllerTest {
     @MockitoBean
     private AlterProductStockUseCase alterProductStockUseCase;
 
-    private final String baseUrl = "/stocks";
+    private final String baseUrl = "/api/v1/stocks";
     private final String validId = UUID.randomUUID().toString();
     private final String validSku = "TEST-SKU";
     private final String validName = "Test Product";
