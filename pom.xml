@@ -12,7 +12,7 @@
     <artifactId>stock</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>stock</name>
-    <description>Demo project for Spring Boot</description>
+    <description>FIAP tech challenge ms-stock</description>
     <url/>
     <licenses>
         <license/>

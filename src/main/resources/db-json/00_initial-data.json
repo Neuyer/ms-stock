@@ -1,0 +1,82 @@
+{
+  "databaseChangeLog": [
+    {
+      "changeSet": {
+        "id": "insert-stock-v1",
+        "author": "Ariel ",
+        "comment": "Insert base Stock",
+        "changes": [
+          {
+            "insertMany": {
+              "collectionName": "stocks",
+              "documents": {
+                "$rawJson": [
+                  {
+                    "id": "1a2b3c4d-e5f6-7890-1234-567890abcdef",
+                    "sku": "ELE-TV-4K-789",
+                    "name": "Smart 4K UHD TV 55 Inch",
+                    "quantity": 25
+                  },
+                  {
+                    "id": "f9e8d7c6-b5a4-3210-fedc-ba9876543210",
+                    "sku": "BOO-SCI-FI-012",
+                    "name": "The Galactic Odyssey",
+                    "quantity": 150
+                  },
+                  {
+                    "id": "10293847-56ab-cdef-0123-456789abcdef",
+                    "sku": "FAS-TSH-L-456",
+                    "name": "Cotton Blend Graphic Tee - Large",
+                    "quantity": 80
+                  },
+                  {
+                    "id": "bcdefa01-2345-6789-abcd-ef0123456789",
+                    "sku": "TOO-KIT-PRO-987",
+                    "name": "Professional 100-Piece Tool Kit",
+                    "quantity": 45
+                  },
+                  {
+                    "id": "98765432-10fe-dcba-9876-543210fedcba",
+                    "sku": "FUR-SOF-L-234",
+                    "name": "Luxury Leather Sofa - 3 Seater",
+                    "quantity": 12
+                  },
+                  {
+                    "id": "34567890-abcdef-0123-4567-89abcdef0123",
+                    "sku": "FOO-SNA-CHOC-567",
+                    "name": "Gourmet Dark Chocolate Bar",
+                    "quantity": 300
+                  },
+                  {
+                    "id": "ef012345-6789-abcd-ef01-23456789abcd",
+                    "sku": "GAM-CON-PS-001",
+                    "name": "Wireless Gaming Controller",
+                    "quantity": 65
+                  },
+                  {
+                    "id": "456789ab-cdef-0123-4567-89abcdef012345",
+                    "sku": "OUT-CAM-HD-321",
+                    "name": "Waterproof HD Action Camera",
+                    "quantity": 50
+                  },
+                  {
+                    "id": "cdefab01-2345-6789-abcd-ef0123456789ab",
+                    "sku": "HEA-EAR-BLU-654",
+                    "name": "Noise-Cancelling Bluetooth Headphones",
+                    "quantity": 90
+                  },
+                  {
+                    "id": "23456789-abcdef-0123-4567-89abcdef01234567",
+                    "sku": "HOM-DEC-PLA-789",
+                    "name": "Artificial Potted Plant - Fiddle Leaf Fig",
+                    "quantity": 110
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

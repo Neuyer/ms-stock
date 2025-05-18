@@ -2,7 +2,7 @@
   "databaseChangeLog": [
     {
       "include": {
-        "file": "db/db-json/00_initial-data.json"
+        "file": "db-json/00_initial-data.json"
       }
     }
   ]
