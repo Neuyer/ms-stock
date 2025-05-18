@@ -50,7 +50,7 @@ class FindStockUseCaseTest {
         IllegalStateException exception = assertThrows(IllegalStateException.class,
                 () -> findStockUseCase.execute(invalidSku));
 
-        assertEquals("Client not found with doc: " + invalidSku, exception.getMessage());
+        assertEquals("Stock not found with sku: " + invalidSku, exception.getMessage());
         verify(stockGateway, times(1)).findBySku(invalidSku);
     }
 
