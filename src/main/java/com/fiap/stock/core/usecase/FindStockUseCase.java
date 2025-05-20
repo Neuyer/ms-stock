@@ -18,8 +18,8 @@ public class FindStockUseCase {
         log.info("Finding stock for sku: {}", sku);
 
         var productStock = stockGateway.findBySku(sku).orElseThrow(() -> {
-            log.error("Stock not for sku doc: {}", sku);
-            return new IllegalStateException("Client not found with doc: " + sku);
+            log.error("Stock not for sku sku: {}", sku);
+            return new IllegalStateException("Stock not found with sku: " + sku);
         });
 
         log.info("Stock found with sku: {}", sku);
